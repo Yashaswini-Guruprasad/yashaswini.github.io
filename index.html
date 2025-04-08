@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashaswini Guruprasad | Embedded Systems Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --secondary: #10b981;
+            --accent: #3b82f6;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --neon: #00ff9d;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--darker);
+            color: var(--light);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        .hero-bg {
+            background: radial-gradient(ellipse at top, rgba(2, 6, 23, 0.9) 0%, rgba(15, 23, 42, 1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .circuit-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233b82f6' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        
+        .wifi-arc {
+            position: absolute;
+            border: 2px solid var(--neon);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: pulse 6s infinite ease-in-out;
+        }
+        
+        .wifi-arc:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .wifi-arc:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 15%;
+            left: 15%;
+            animation-delay: 1s;
+        }
+        
+        .wifi-arc:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(1.05);
+            }
+        }
+        
+        .chip-node {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: var(--neon);
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: blink 3s infinite ease-in-out;
+            box-shadow: 0 0 10px var(--neon);
+        }
+        
+        @keyframes blink {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+        
+        .circuit-line {
+            position: absolute;
+            height: 2px;
+            background-color: var(--neon);
+            opacity: 0.2;
+            transform-origin: left center;
+            z-index: -1;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 3px solid var(--secondary);
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+        }
+        
+        .skill-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-card:hover .skill-icon {
+            transform: scale(1.1);
+            color: var(--neon);
+        }
+        
+        .project-tab.active {
+            border-bottom: 3px solid var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+        }
+        
+        .contact-input:focus + .contact-label,
+        .contact-input:not(:placeholder-shown) + .contact-label {
+            transform: translateY(-25px);
+            font-size: 0.75rem;
+            color: var(--secondary);
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            margin: 10px 0 20px;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        .signal-meter {
+            display: flex;
+            align-items: flex-end;
+            height: 30px;
+        }
+        
+        .signal-bar {
+            width: 5px;
+            margin-right: 3px;
+            background-color: var(--neon);
+            opacity: 0.3;
+            transition: all 0.3s ease;
+        }
+        
+        .signal-bar:nth-child(1) { height: 5px; animation: signal 2s infinite; }
+        .signal-bar:nth-child(2) { height: 10px; animation: signal 2s infinite 0.2s; }
+        .signal-bar:nth-child(3) { height: 15px; animation: signal 2s infinite 0.4s; }
+        .signal-bar:nth-child(4) { height: 20px; animation: signal 2s infinite 0.6s; }
+        .signal-bar:nth-child(5) { height: 25px; animation: signal 2s infinite 0.8s; }
+        
+        @keyframes signal {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .chip-rotate {
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-opacity-90 backdrop-blur-sm bg-slate-900 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-white flex items-center">
+                        <span class="text-cyan-400">Y</span>ashaswini
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Skills</a>
+                    <a href="#experience" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Experience</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">About</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">Skills</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">Experience</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="circuit-pattern"></div>
+        
+        <!-- Wi-Fi arcs -->
+        <div class="wifi-arc"></div>
+        <div class="wifi-arc"></div>
+        <div class="wifi-arc"></div>
+        
+        <!-- Circuit nodes -->
+        <div class="chip-node" style="top: 30%; left: 25%;"></div>
+        <div class="chip-node" style="top: 40%; left: 75%; animation-delay: 0.5s;"></div>
+        <div class="chip-node" style="top: 70%; left: 15%; animation-delay: 1s;"></div>
+        <div class="chip-node" style="top: 80%; left: 60%; animation-delay: 1.5s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div class="text-center md:text-left md:flex items-center justify-between">
+                <div class="md:w-1/2 fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                        <span class="text-cyan-400">Yashaswini</span> Guruprasad
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-semibold text-emerald-400 mb-6">
+                        Embedded Systems & Wireless Communication Engineer
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
+                        "Bridging hardware, systems, and wireless intelligence."
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                            Contact Me
+                        </a>
+                        <a href="#" class="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-900/30 font-medium rounded-lg transition duration-300 transform hover:scale-105">
+                            View Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block md:w-1/2 relative">
+                    <div class="relative w-64 h-64 mx-auto">
+                        <div class="absolute inset-0 bg-cyan-500 rounded-full opacity-20 blur-xl animate-pulse"></div>
+                        <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-cyan-400/50">
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-emerald-500/10"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-8xl font-bold text-cyan-400/30">YG</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <a href="#about" class="text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900 relative overflow-hidden">
+        <div class="circuit-line" style="width: 150px; top: 15%; left: 10%; transform: rotate(45deg);"></div>
+        <div class="circuit-line" style="width: 200px; top: 25%; right: 5%; transform: rotate(-20deg);"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-white inline-block">About Me</h2>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2 fade-in">
+                    <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 shadow-xl">
+                        <blockquote class="text-lg italic text-gray-300 mb-6">
+                            "I'm a systems thinker who loves building scalable embedded architectures and optimizing performance from the OS kernel to the signal level. I enjoy working with constrained systems, hardware protocols, and futuristic communication tech like Li-Fi and 5G."
+                        </blockquote>
+                        <p class="text-gray-400 mb-6">
+                            Passionate embedded systems engineer with expertise in wireless protocols, hardware-software integration, and low-level system optimization. My work focuses on creating efficient, reliable embedded solutions for next-generation communication systems.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="px-4 py-2 bg-cyan-900/30 text-cyan-400 rounded-full text-sm font-medium">
+                                Low-Power Systems
+                            </div>
+                            <div class="px-4 py-2 bg-emerald-900/30 text-emerald-400 rounded-full text-sm font-medium">
+                                Wireless Protocols
+                            </div>
+                            <div class="px-4 py-2 bg-purple-900/30 text-purple-400 rounded-full text-sm font-medium">
+                                Real-Time Comms
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 fade-in" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-white mb-6">Education</h3>
+                    <div class="relative pl-8 timeline">
+                        <div class="mb-8 relative timeline-item">
+                            <div class="bg-slate-800/70 p-6 rounded-lg border-l-4 border-cyan-400 shadow-lg">
+                                <h4 class="text-lg font-bold text-white mb-1">M.S. Electrical and Computer Engineering</h4>
+                                <p class="text-cyan-400 mb-2">University of Massachusetts Amherst</p>
+                                <p class="text-gray-400">May 2025 | CGPA: 3.8/4.0</p>
+                            </div>
+                        </div>
+                        <div class="mb-8 relative timeline-item">
+                            <div class="bg-slate-800/70 p-6 rounded-lg border-l-4 border-emerald-400 shadow-lg">
+                                <h4 class="text-lg font-bold text-white mb-1">B.E. Electronics & Communication</h4>
+                                <p class="text-emerald-400 mb-2">Visvesvaraya Technological University</p>
+                                <p class="text-gray-400">August 2020 | CGPA: 8.5/10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-800 relative overflow-hidden">
+        <div class="circuit-line" style="width: 120px; top: 10%; left: 5%; transform: rotate(15deg);"></div>
+        <div class="circuit-line" style="width: 180px; bottom: 20%; right: 8%; transform: rotate(-30deg);"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-white inline-block">Technical Skills</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Languages -->
+                <div class="skill-card bg-slate-900/50 p-6 rounded-xl border border-slate-700 transition duration-300 hover:shadow-lg fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-cyan-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-cyan-400 skill-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">C</span>
+                        <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">C++</span>
+                        <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">Verilog</span>
+                        <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">VHDL</span>
+                        <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">Assembly</span>
+                    </div>
+                </div>
+                
+                <!-- Protocols -->
+                <div class="skill-card bg-slate-900/50 p-6 rounded-xl border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.1s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-network-wired text-purple-400 skill-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Protocols</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">UART</span>
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">SPI</span>
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">I2C</span>
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">MQTT</span>
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">Wi-Fi</span>
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">Bluetooth/BLE</span>
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">ZigBee</span>
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">LoRa</span>
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">Thread</span>
+                    </div>
+                </div>
+                
+                <!-- RTOS -->
+                <div class="skill-card bg-slate-900/50 p-6 rounded-xl border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-emerald-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-desktop text-emerald-400 skill-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">RTOS</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-emerald-900/20 text-emerald-400 rounded-full text-sm">Linux</span>
+                        <span class="px-3 py-1 bg-emerald-900/20 text-emerald-400 rounded-full text-sm">FreeRTOS</span>
+                        <span class="px-3 py-1 bg-emerald-900/20 text-emerald-400 rounded-full text-sm">Unix</span>
+                        <span class="px-3 py-1 bg-emerald-900/20 text-emerald-400 rounded-full text-sm">Windows</span>
+                    </div>
+                </div>
+                
+                <!-- Tools -->
+                <div class="skill-card bg-slate-900/50 p-6 rounded-xl border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.3s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-rose-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-rose-400 skill-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">Git</span>
+                        <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">Jenkins</span>
+                        <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">GDB</span>
+                        <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">Bash</span>
+                        <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">LaTeX</span>
+                        <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">Jira</span>
+                        <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">Wireshark</span>
+                        <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">MATLAB</span>
+                    </div>
+                </div>
+                
+                <!-- Embedded Hardware -->
+                <div class="skill-card bg-slate-900/50 p-6 rounded-xl border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-amber-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-microchip text-amber-400 skill-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Embedded Hardware</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-amber-900/20 text-amber-400 rounded-full text-sm">STM32</span>
+                        <span class="px-3 py-1 bg-amber-900/20 text-amber-400 rounded-full text-sm">Raspberry Pi</span>
+                        <span class="px-3 py-1 bg-amber-900/20 text-amber-400 rounded-full text-sm">ARM Cortex</span>
+                        <span class="px-3 py-1 bg-amber-900/20 text-amber-400 rounded-full text-sm">MSP430</span>
+                        <span class="px-3 py-1 bg-amber-900/20 text-amber-400 rounded-full text-sm">CC2652</span>
+                    </div>
+                </div>
+                
+                <!-- EDA Tools -->
+                <div class="skill-card bg-slate-900/50 p-6 rounded-xl border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.5s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-project-diagram text-blue-400 skill-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">EDA Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-900/20 text-blue-400 rounded-full text-sm">Altium</span>
+                        <span class="px-3 py-1 bg-blue-900/20 text-blue-400 rounded-full text-sm">TINA</span>
+                        <span class="px-3 py-1 bg-blue-900/20 text-blue-400 rounded-full text-sm">Cadence</span>
+                        <span class="px-3 py-1 bg-blue-900/20 text-blue-400 rounded-full text-sm">Simulink</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-900 relative overflow-hidden">
+        <div class="circuit-line" style="width: 250px; top: 30%; left: 5%; transform: rotate(10deg);"></div>
+        <div class="circuit-line" style="width: 180px; bottom: 25%; right: 10%; transform: rotate(-15deg);"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-white inline-block">Professional Experience</h2>
+            </div>
+            
+            <div class="relative pl-8 timeline max-w-4xl mx-auto">
+                <!-- CommScope -->
+                <div class="mb-12 relative timeline-item fade-in">
+                    <div class="bg-slate-800/70 p-6 rounded-xl border-l-4 border-cyan-400 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Embedded Software Engineering Intern</h3>
+                                <p class="text-cyan-400">CommScope</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="px-3 py-1 bg-cyan-900/30 text-cyan-400 rounded-full text-sm">May 2024 - Aug 2024</span>
+                            </div>
+                        </div>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2">
+                            <li>Integrated WPC standard into RF-DMA (RP6100 Radio)</li>
+                            <li>Used VSA/VSG tools for 5G NR optimization</li>
+                            <li>Built M-plane communication for RU-DU link using ORAN protocols</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Collins Aerospace -->
+                <div class="mb-12 relative timeline-item fade-in" style="transition-delay: 0.2s;">
+                    <div class="bg-slate-800/70 p-6 rounded-xl border-l-4 border-emerald-400 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Wireless Systems Associate Engineer</h3>
+                                <p class="text-emerald-400">Collins Aerospace</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="px-3 py-1 bg-emerald-900/30 text-emerald-400 rounded-full text-sm">Jan 2022 - Aug 2023</span>
+                            </div>
+                        </div>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2">
+                            <li>Developed Li-Fi system with Raspberry Pi and custom PCBs, achieving 1 Gbps for aircraft video transmission</li>
+                            <li>Created Wi-Fi DAQ system using CC3235SF microcontroller and MQTT for sensor data</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Deloitte -->
+                <div class="mb-12 relative timeline-item fade-in" style="transition-delay: 0.4s;">
+                    <div class="bg-slate-800/70 p-6 rounded-xl border-l-4 border-purple-400 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">QlikView Analyst</h3>
+                                <p class="text-purple-400">Deloitte</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="px-3 py-1 bg-purple-900/30 text-purple-400 rounded-full text-sm">Sep 2020 - Jan 2022</span>
+                            </div>
+                        </div>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2">
+                            <li>Built customer forecasting tool (reduced manual effort 80 → 8 hours)</li>
+                            <li>Migrated jobs from QMC to Autosys and enhanced dashboard integration</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Research Assistant -->
+                <div class="relative timeline-item fade-in" style="transition-delay: 0.6s;">
+                    <div class="bg-slate-800/70 p-6 rounded-xl border-l-4 border-amber-400 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Research Assistant</h3>
+                                <p class="text-amber-400">University of Massachusetts Amherst</p>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="px-3 py-1 bg-amber-900/30 text-amber-400 rounded-full text-sm">Aug 2024 - Dec 2024</span>
+                            </div>
+                        </div>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2">
+                            <li>Modeled power consumption of STM32 MCUs with BLE for ultra-low-energy embedded systems</li>
+                            <li>Focused on BLE optimization and data reliability for battery-based IoT nodes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-800 relative overflow-hidden">
+        <div class="circuit-line" style="width: 150px; top: 20%; right: 5%; transform: rotate(-25deg);"></div>
+        <div class="circuit-line" style="width: 200px; bottom: 15%; left: 8%; transform: rotate(15deg);"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-white inline-block">Featured Projects</h2>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="project-tab px-4 py-2 text-white font-medium active" data-filter="all">All</button>
+                <button class="project-tab px-4 py-2 text-gray-400 hover:text-white font-medium" data-filter="os">OS</button>
+                <button class="project-tab px-4 py-2 text-gray-400 hover:text-white font-medium" data-filter="networking">Networking</button>
+                <button class="project-tab px-4 py-2 text-gray-400 hover:text-white font-medium" data-filter="hardware">Hardware</button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Virtual Memory Simulator -->
+                <div class="project-card bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700 transition duration-300 hover:shadow-lg fade-in" data-category="os">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-cyan-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-memory text-cyan-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Virtual Memory Simulator</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Simulated address space, page faults, and memory management with various replacement policies.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">C++</span>
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">Systems</span>
+                            <span class="px-3 py-1 bg-cyan-900/20 text-cyan-400 rounded-full text-sm">Simulation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Linux Thread Library -->
+                <div class="project-card bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.2s;" data-category="os">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-emerald-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-cogs text-emerald-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Linux Thread Library</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Implemented custom threads, context switching, and SSTF-based disk scheduler in Linux environment.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-400 rounded-full text-sm">C</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-400 rounded-full text-sm">Linux</span>
+                            <span class="px-3 py-1 bg-emerald-900/20 text-emerald-400 rounded-full text-sm">Systems</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Multithreaded Webserver -->
+                <div class="project-card bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.4s;" data-category="networking">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-server text-purple-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Multithreaded Webserver</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Developed and benchmarked high-performance webserver against Apache/Nginx with various concurrency models.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">C++</span>
+                            <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">Networking</span>
+                            <span class="px-3 py-1 bg-purple-900/20 text-purple-400 rounded-full text-sm">Performance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RISC-V Processor Simulator -->
+                <div class="project-card bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.6s;" data-category="hardware">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-amber-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-microchip text-amber-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">RISC-V Processor Simulator</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Implemented branch prediction, data forwarding, and pipelined execution for RISC-V architecture.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-900/20 text-amber-400 rounded-full text-sm">Verilog</span>
+                            <span class="px-3 py-1 bg-amber-900/20 text-amber-400 rounded-full text-sm">RISC-V</span>
+                            <span class="px-3 py-1 bg-amber-900/20 text-amber-400 rounded-full text-sm">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Li-Fi Communication System -->
+                <div class="project-card bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 0.8s;" data-category="hardware">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-lightbulb text-blue-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Li-Fi Communication System</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Designed and implemented high-speed Li-Fi system achieving 1 Gbps for aircraft video transmission.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-900/20 text-blue-400 rounded-full text-sm">Raspberry Pi</span>
+                            <span class="px-3 py-1 bg-blue-900/20 text-blue-400 rounded-full text-sm">Li-Fi</span>
+                            <span class="px-3 py-1 bg-blue-900/20 text-blue-400 rounded-full text-sm">Wireless</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wi-Fi DAQ System -->
+                <div class="project-card bg-slate-900/50 rounded-xl overflow-hidden border border-slate-700 transition duration-300 hover:shadow-lg fade-in" style="transition-delay: 1s;" data-category="networking">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-rose-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-wifi text-rose-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Wi-Fi DAQ System</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Created wireless data acquisition system using CC3235SF microcontroller and MQTT protocol for sensor networks.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">CC3235SF</span>
+                            <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">MQTT</span>
+                            <span class="px-3 py-1 bg-rose-900/20 text-rose-400 rounded-full text-sm">IoT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="py-16 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="section-title text-3xl font-bold text-white inline-block">Relevant Coursework</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in">Computer Architecture</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.1s;">Network Embedded Systems</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.2s;">OS Design</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.3s;">Data Structures</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.4s;">ARM MCUs</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.5s;">Quantum Computing</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.6s;">Wireless AI (5G/6G)</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.7s;">Circuit Analysis</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.8s;">Low-Power Design</div>
+                <div class="px-4 py-3 bg-slate-800/50 text-gray-300 rounded-lg text-center fade-in" style="transition-delay: 0.9s;">Signal Processing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-white inline-block">Resume</h2>
+            </div>
+            
+            <div class="bg-slate-900/50 p-8 rounded-xl border border-slate-700 shadow-lg max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/3 text-center">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 border-2 border-cyan-400/50 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-file-alt text-4xl text-cyan-400"></i>
+                        </div>
+                        <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-download mr-2"></i> Download PDF
+                        </a>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-bold text-white mb-4">Career Highlights</h3>
+                        <ul class="list-disc pl-5 text-gray-400 space-y-2">
+                            <li>Integrated WPC standard into 5G radio with VSA/VSG tools at CommScope</li>
+                            <li>Developed 1 Gbps Li-Fi system for aircraft video transmission at Collins Aerospace</li>
+                            <li>Created Wi-Fi DAQ system with CC3235SF and MQTT protocol</li>
+                            <li>Modeled STM32 BLE power consumption for ultra-low-energy IoT nodes</li>
+                            <li>Built virtual memory simulator with page fault handling and replacement policies</li>
+                            <li>Implemented custom Linux thread library with SSTF disk scheduler</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900 relative overflow-hidden">
+        <div class="circuit-line" style="width: 150px; top: 20%; left: 10%; transform: rotate(45deg);"></div>
+        <div class="circuit-line" style="width: 200px; bottom: 20%; right: 10%; transform: rotate(-30deg);"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-3xl font-bold text-white inline-block">Get In Touch</h2>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 fade-in">
+                    <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 shadow-lg">
+                        <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-900/30 flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Email</h4>
+                                    <a href="mailto:yguruprasad@umass.edu" class="text-gray-400 hover:text-cyan-400">yguruprasad@umass.edu</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-900/30 flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Phone</h4>
+                                    <a href="tel:+14135120098" class="text-gray-400 hover:text-emerald-400">+1 (413) 512-0098</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center mr-4">
+                                    <i class="fab fa-linkedin-in text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/yashaswini-guruprasad/" target="_blank" class="text-gray-400 hover:text-blue-400">linkedin.com/in/yashaswini-guruprasad</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 fade-in" style="transition-delay: 0.2s;">
+                    <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 shadow-lg">
+                        <h3 class="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
+                        
+                        <form class="space-y-6">
+                            <div class="relative">
+                                <input type="text" id="name" class="contact-input w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-cyan-400" placeholder=" ">
+                                <label for="name" class="contact-label absolute left-4 top-3 text-gray-400 transition-all duration-300">Your Name</label>
+                            </div>
+                            
+                            <div class="relative">
+                                <input type="email" id="email" class="contact-input w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-emerald-400" placeholder=" ">
+                                <label for="email" class="contact-label absolute left-4 top-3 text-gray-400 transition-all duration-300">Your Email</label>
+                            </div>
+                            
+                            <div class="relative">
+                                <textarea id="message" rows="5" class="contact-input w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-purple-400" placeholder=" "></textarea>
+                                <label for="message" class="contact-label absolute left-4 top-3 text-gray-400 transition-all duration-300">Your Message</label>
+                            </div>
+                            
+                            <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                                <i class="fas fa-paper-plane mr-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p class="text-gray-400">&copy; 2024 Yashaswini Guruprasad. All rights reserved.</p>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <div class="signal-meter">
+                        <div class="signal-bar"></div>
+                        <div class="signal-bar"></div>
+                        <div class="signal-bar"></div>
+                        <div class="signal-bar"></div>
+                        <div class="signal-bar"></div>
+                    </div>
+                    <div class="chip-rotate text-cyan-400">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                    <a href="https://www.linkedin.com/in/yashaswini-guruprasad/" target="_blank" class="text-gray-400 hover:text-blue-400">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="mailto:yguruprasad@umass.edu" class="text-gray-400 hover:text-cyan-400">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="tel:+14135120098" class="text-gray-400 hover:text-emerald-400">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Project filtering
+        const projectTabs = document.querySelectorAll('.project-tab');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        projectTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                projectTabs.forEach(t => t.classList.remove('active', 'text-white'));
+                projectTabs.forEach(t => t.classList.add('text-gray-400'));
+                tab.classList.add('active', 'text-white');
+                tab.classList.remove('text-gray-400');
+                
+                // Filter projects
+                const filter = tab.dataset.filter;
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.remove('open');
+                }
+            });
+        });
+        
+        // Scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const checkVisibility = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Check on scroll and load
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+        // Generate circuit lines dynamically
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            for (let i = 0; i < 3; i++) {
+                const line = document.createElement('div');
+                line.className = 'circuit-line';
+                
+                // Random properties
+                const width = Math.floor(Math.random() * 200) + 100;
+                const top = Math.floor(Math.random() * 80) + 10;
+                const left = Math.floor(Math.random() * 80) + 10;
+                const rotation = Math.floor(Math.random() * 60) - 30;
+                
+                line.style.width = `${width}px`;
+                line.style.top = `${top}%`;
+                line.style.left = `${left}%`;
+                line.style.transform = `rotate(${rotation}deg)`;
+                
+                section.appendChild(line);
+            }
+        });
+        
+        // Animate contact form icons on focus
+        const contactInputs = document.querySelectorAll('.contact-input');
+        contactInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                const label = this.nextElementSibling;
+                label.style.color = getComputedStyle(this).getPropertyValue('--secondary');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    const label = this.nextElementSibling;
+                    label.style.color = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
